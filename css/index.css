@@ -3,16 +3,34 @@ header #header{display:grid; grid-template:25px 1fr 25px / 25px 55px 1fr 50px 25
 header #header #header_logo{grid-row:2/3; grid-column:2/3;}
 header #header #pc_header{display:none;}
 header #header #mobile_header{grid-row:2/3; grid-column:4/5; position:relative; cursor:pointer;}
-header #header #mobile_header div{position:absolute; width: 28px; height:3px; background-color:rgb(32,32,32); z-index:1000; transition: transform 0.4s cubic-bezier(0.52, 0.01, 0, 1) 0.4s;}
+header #header #mobile_header div{position:absolute; width: 28px; height:3px; background-color:rgb(32,32,32); z-index:10000; transition: transform 0.4s cubic-bezier(0.52, 0.01, 0, 1) 0.4s;}
 header #header #mobile_header #mobile_header1{left:50%; transform:translateX(-50%) scale(1); top:20px }
 header #header #mobile_header #mobile_header2{left:50%; transform:translateX(-50%) scale(1);bottom:20px }
-header #header #mobile_header #mobile_header3{left:50%; top:50%; transform:translate(-50%,-50%) rotate(45deg) scale(0)}
-header #header #mobile_header #mobile_header4{left:50%; top:50%; transform:translate(-50%,-50%) rotate(-45deg) scale(0)}
-header #header #mobile_header:hover #mobile_header1{left:50%; transform:translateX(-50%) scale(0); top:20px }
-header #header #mobile_header:hover #mobile_header2{left:50%; transform:translateX(-50%) scale(0); bottom:20px }
-header #header #mobile_header:hover #mobile_header3{transform:translate(-50%,-50%) rotate(45deg) scale(1)}
-header #header #mobile_header:hover #mobile_header4{transform:translate(-50%,-50%) rotate(-45deg) scale(1)}
 #header_logo svg{width:55px; height:55px;}
+
+nav #only_mobile_menu{background-color: #eda498; position:fixed; z-index:9999; top:-100vh; width:100vw; height:100vh; display:grid; grid-template: 25px 58px 300px 1fr 160px 40px/ 25px 1fr 25px; transition:0.6s;}
+nav #only_mobile_header{display:grid; grid-row:2/3; grid-column:2/3; grid-template: 1fr /  55px 1fr 50px}
+nav #only_mobile_header #mobile_header0{grid-column:3/4; position:relative; cursor:pointer; z-index:10001}
+nav #only_mobile_header #mobile_header0 div{position:absolute; width: 28px; height:3px; background-color:rgb(32,32,32); z-index:10000; transition: transform 0.4s cubic-bezier(0.52, 0.01, 0, 1) 0.4s;}
+nav #only_mobile_menu p{text-transform: uppercase; grid-column:1/2; font-size:1.5rem; line-height:1rem;font-weight: bold;}
+nav #only_mobile_menu #only_mobile_main{list-style: none; padding:0; grid-row: 3/4; grid-column:2/3;}
+nav #only_mobile_menu #only_mobile_main a{color:#202020; text-decoration: none; text-transform: uppercase; font-size:3.5rem; font-weight:bold;}
+nav #only_mobile_menu #only_mobile_main div:nth-child(6){margin-top:15px; border:1px solid #202020; width:314px; height:45px; display:grid; place-items: center;}
+nav #only_mobile_menu #only_mobile_main div:nth-child(6) a{font-size:1.8rem;}
+nav #only_mobile_menu #mobile_sns{grid-row: 5/6; grid-column:2/3;}
+nav #only_mobile_menu #mobile_copy{grid-row: 6/7; grid-column:2/3;}
+nav #mobile_sns{display:grid; grid-template-rows:repeat(3,50px); align-items:center;}
+nav #mobile_sns #mobile_insta{text-transform: uppercase; border-top:1px solid #202020; height:50px; grid-row:1/2; display:grid; align-items:center; display:grid; align-items:center; grid-template:10px 30px 10px/ 50px 1fr;}
+nav #mobile_sns #mobile_insta div{background: url(../images/mobile_insta.png) no-repeat 50%/cover; grid-row:2/3;grid-column:1/2; width:50%; height:100%;}
+nav #mobile_sns #mobile_insta p{grid-row: 2/3; grid-column:2/3; font-size:1.2rem}
+nav #mobile_sns #mobile_fb{text-transform: uppercase; border-top:1px solid #202020; height:50px; grid-row:2/3; display:grid; align-items:center; display:grid; align-items:center;  grid-template:10px 30px 10px/ 50px 1fr;}
+nav #mobile_sns #mobile_fb div{background: url(../images/mobile_fb.png) no-repeat 50%/cover; grid-row:2/3;grid-column:1/2; width:50%; height:100%;}
+nav #mobile_sns #mobile_fb p{grid-row: 2/3; grid-column:2/3; font-size:1.2rem}
+nav #mobile_sns #mobile_join{text-transform: uppercase; border-top:1px solid #202020; height:50px; grid-row:3/4; display:grid; align-items:center;  display:grid; align-items:center; font-weight:bold;}
+nav #mobile_sns div p{text-transform: uppercase; margin:0; font-weight:bold;}
+nav #mobile_copy{display:grid; grid-template-columns:250px 120px 1fr; justify-items:start;}
+nav #mobile_copy p{max-width:250px; font-size:0.75rem; grid-column:1/2; grid-row:1/2; font-weight:400; text-transform:none;}
+nav #mobile_copy a{font-size:0.75rem; color:#202020; text-decoration: none; margin:12px auto;}
 main #main1 h1{font-size:6rem; text-transform:uppercase;line-height: 1;  font-weight:bold; margin:50px 25px 10px;}
 main #main1 p{font-size:1.5rem; margin: 10px 25px 30px;}
 main #main1 #main1_1{text-transform: uppercase; margin-left:25px; font-size:2rem; font-weight:bold;}

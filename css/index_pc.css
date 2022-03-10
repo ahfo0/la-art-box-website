@@ -1,0 +1,6 @@
+/* PC 1024px 이상 */
+body{overflow-x:scroll !important;}
+header{position:fixed; top:0;}
+header #mobile_header{display:none;}
+nav #only_mobile_menu{display:none;}
+main #main{display:grid; grid-template-columns: repeat(5,100vw);}
