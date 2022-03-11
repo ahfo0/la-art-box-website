@@ -46,6 +46,8 @@
         <script src="common/prefixfree.min.js"></script>
         <!-- jQuery -->
         <script src="common/jquery-3.6.0.min.js"></script>
+        <!-- mousewheel plugin -->
+        <script src="common/jquery.mousewheel.min.js"></script>
     </head>
     <body>
         <script>AOS.init();</script>
@@ -141,7 +143,7 @@
                     </div>
                 </div>
                 <div id="main2" class="box"  data-aos="fade-left" data-aos-delay="1800">
-                    <div id="main2_1" >
+                    <div id="main2_1">
                         <p>our story</p>
                         <h2>laab</h2>
                         <div></div>
@@ -161,21 +163,21 @@
                     </div>
                 </div>
                 <div id="main2_pc" class="box">
-                    <div id="main2_1_pc" data-aos="fade-left" data-aos-delay="1900">
+                    <div id="main2_1_pc" data-aos="fade-left" data-aos-delay="1900" style="width:700px">
                         <p>our story</p>
                         <h2>laab</h2>
-                        <div></div>
+                        <div style="width:700px"></div>
                     </div>
-                    <div id="main2_2_pc" data-aos="fade-left" data-aos-delay="2100">
+                    <div id="main2_2_pc" data-aos="fade-left" data-aos-delay="2100" style="width:70px; transform:translateX(435px)">
                         <p>artists</p>
                         <h2>artists</h2>
                     </div>
-                    <div id="main2_3_pc" data-aos="fade-left" data-aos-delay="2300">
+                    <div id="main2_3_pc" data-aos="fade-left" data-aos-delay="2300" style="width:70px; transform:translateX(240px)">
                         <p>events</p>
                         <h2>events</h2>
                         <div></div>
                     </div>
-                    <div id="main2_4_pc" data-aos="fade-left" data-aos-delay="2500">
+                    <div id="main2_4_pc" data-aos="fade-left" data-aos-delay="2500" style="width:70px; transform:translateX(110px)">
                         <p>contact</p>
                         <h2>contact</h2>
                     </div>
@@ -270,58 +272,34 @@
                 $("#mobile_header4").css("top","50%");
                 $("#mobile_header4").css("left","50%");
             });
-
         </script>
         <!-- 반응형 script 마우스휠 상하(모바일)/좌우(PC) -->
         <script>
             if($(window).width() > 1023){
-            window.onload = function () {
-                var elm = ".box";
-                $(elm).each(function (index) {
-                    // 개별적으로 Wheel 이벤트 적용
-                    $(this).on("mousewheel DOMMouseScroll", function (e) {
-                        e.preventDefault();
-                        var delta = 0;
-                        if (!event) event = window.event;
-                        if (event.wheelDelta) {
-                            delta = event.wheelDelta / 120;
-                            if (window.opera) delta = -delta;
-                        }
-                        else if (event.detail)
-                            delta = -event.detail / 3;
-                        var moveTop = $(window).scrollLeft();
-                        var elmSelecter = $(elm).eq(index);
-                        // 마우스휠을 위에서 아래로
-                        if (delta < 0) {
-                            if ($(elmSelecter).next() != undefined) {
-                                try {
-                                    moveTop = $(elmSelecter).next().offset().left;
-                                } catch (e) { }
-                            }
-                            // 마우스휠을 아래에서 위로
-                        } else {
-                            if ($(elmSelecter).prev() != undefined) {
-                                try {
-                                    moveTop = $(elmSelecter).prev().offset().left;
-                                } catch (e) { }
-                            }
-                        }
-                        // 화면 이동 0.8초(800)
-                        $("html,body").stop().animate({
-                            scrollLeft: moveTop + 'px'
-                        }, {
-                            duration: 800, complete: function () {
-                            }
-                        });
-                    });
+                $(document).ready(function() {
+                $('html, body, *').mousewheel(function(e, delta) {
+                this.scrollLeft -= (delta*100);
+                e.preventDefault();
                 });
-            }}
-            // 반응형 js 적용 새로고침
+                });
+            }
+            // pc만 적용하기 위해 새로고침
             if(matchMedia("screen and (max-width: 1023px)").matches){ console.log("mobile"); }else if(matchMedia("screen and (min-width: 1024px)").matches){ console.log("pc"); }
             window.onresize = function(){ document.location.reload(); };
         </script>
         <!-- pc버전 main2 -->
         <script>
+            // 초반 맞춤용(html 문서에 style값 부여한 것 해제)
+            $(`#main2_1_pc`).css("width","265px");
+            $(`#main2_1_pc div`).css("width","265px");
+            $(`#main2_2_pc`).css("width","265px");
+            $(`#main2_2_pc`).css("transform","translateX(0)");
+            $(`#main2_3_pc`).css("width","200px");
+            $(`#main2_3_pc`).css("transform","translateX(0)");
+            $(`#main2_4_pc`).css("width","190px");
+            $(`#main2_4_pc`).css("transform","translateX(0)");
+            // 호버이벤트
+            // main2_1
             $(document).ready(function()
             {
             $(`#main2_1_pc`).hover(function(){
@@ -330,6 +308,7 @@
             $(`#main2_2_pc`).css("width","70px");
             $(`#main2_2_pc`).css("transform","translateX(435px)");
             $(`#main2_3_pc`).css("width","70px");
+            $(`#main2_3_pc div`).css("width","70px");
             $(`#main2_3_pc`).css("transform","translateX(240px)");
             $(`#main2_4_pc`).css("width","70px");
             $(`#main2_4_pc`).css("transform","translateX(110px)");
@@ -339,10 +318,86 @@
             $(`#main2_2_pc`).css("width","265px");
             $(`#main2_2_pc`).css("transform","translateX(0)");
             $(`#main2_3_pc`).css("width","200px");
+            $(`#main2_3_pc div`).css("width","200px");
             $(`#main2_3_pc`).css("transform","translateX(0)");
             $(`#main2_4_pc`).css("width","190px");
             $(`#main2_4_pc`).css("transform","translateX(0)");
-        }); });
+            }); });
+            // main2_2
+            $(document).ready(function()
+            {
+            $(`#main2_2_pc`).hover(function(){
+            $(`#main2_1_pc`).css("width","70px");
+            $(`#main2_1_pc div`).css("width","70px");
+            $(`#main2_1_pc`).css("transform","translateX(0px)");
+            $(`#main2_2_pc`).css("width","700px");
+            $(`#main2_2_pc`).css("transform","translateX(-195px)");
+            $(`#main2_3_pc`).css("width","70px");
+            $(`#main2_3_pc`).css("transform","translateX(240px)");
+            $(`#main2_3_pc div`).css("width","70px");
+            $(`#main2_4_pc`).css("width","70px");
+            $(`#main2_4_pc`).css("transform","translateX(110px)");
+            },function(){
+            $(`#main2_1_pc`).css("width","265px");
+            $(`#main2_1_pc div`).css("width","265px");
+            $(`#main2_2_pc`).css("width","265px");
+            $(`#main2_2_pc`).css("transform","translateX(0)");
+            $(`#main2_3_pc`).css("width","200px");
+            $(`#main2_3_pc div`).css("width","200px");
+            $(`#main2_3_pc`).css("transform","translateX(0)");
+            $(`#main2_4_pc`).css("width","190px");
+            $(`#main2_4_pc`).css("transform","translateX(0)");
+            }); });
+            // main2_3
+            $(document).ready(function()
+            {
+            $(`#main2_3_pc`).hover(function(){
+            $(`#main2_1_pc`).css("width","70px");
+            $(`#main2_1_pc div`).css("width","70px");
+            $(`#main2_1_pc`).css("transform","translateX(0px)");
+            $(`#main2_2_pc`).css("width","70px");
+            $(`#main2_2_pc`).css("transform","translateX(-195px)");
+            $(`#main2_3_pc`).css("width","700px");
+            $(`#main2_3_pc`).css("transform","translateX(-390px)");
+            $(`#main2_3_pc div`).css("width","700px");
+            $(`#main2_4_pc`).css("width","70px");
+            $(`#main2_4_pc`).css("transform","translateX(110px)");
+            },function(){
+            $(`#main2_1_pc`).css("width","265px");
+            $(`#main2_1_pc div`).css("width","265px");
+            $(`#main2_2_pc`).css("width","265px");
+            $(`#main2_2_pc`).css("transform","translateX(0)");
+            $(`#main2_3_pc`).css("width","200px");
+            $(`#main2_3_pc div`).css("width","200px");
+            $(`#main2_3_pc`).css("transform","translateX(0)");
+            $(`#main2_4_pc`).css("width","190px");
+            $(`#main2_4_pc`).css("transform","translateX(0)");
+            }); });
+            // main2_4
+            $(document).ready(function()
+            {
+            $(`#main2_4_pc`).hover(function(){
+            $(`#main2_1_pc`).css("width","70px");
+            $(`#main2_1_pc div`).css("width","70px");
+            $(`#main2_1_pc`).css("transform","translateX(0px)");
+            $(`#main2_2_pc`).css("width","70px");
+            $(`#main2_2_pc`).css("transform","translateX(-195px)");
+            $(`#main2_3_pc`).css("width","70px");
+            $(`#main2_3_pc`).css("transform","translateX(-390px)");
+            $(`#main2_3_pc div`).css("width","70px");
+            $(`#main2_4_pc`).css("width","700px");
+            $(`#main2_4_pc`).css("transform","translateX(-520px)");
+            },function(){
+            $(`#main2_1_pc`).css("width","265px");
+            $(`#main2_1_pc div`).css("width","265px");
+            $(`#main2_2_pc`).css("width","265px");
+            $(`#main2_2_pc`).css("transform","translateX(0)");
+            $(`#main2_3_pc`).css("width","200px");
+            $(`#main2_3_pc div`).css("width","200px");
+            $(`#main2_3_pc`).css("transform","translateX(0)");
+            $(`#main2_4_pc`).css("width","190px");
+            $(`#main2_4_pc`).css("transform","translateX(0)");
+            }); });
         </script>
     </body>
 </html>
