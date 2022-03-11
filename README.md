@@ -18,7 +18,7 @@ https://github.com/ahfo0/2022-Portfolio
 - 1차 수정 : 2022.03.10 (AOS.js 추가)
 - 2차 수정 : 2022.03.11 (일부 hover 이벤트 추가, mousewheel 이벤트 추가)
 
-### 보완 사항
+### 보완 예정
 
 - PC버전 보완
 - 애니메이션 효과
