@@ -62,17 +62,16 @@
                     </a>
                 </div>
                 <div id="pc_header">
-                    <a href="#">our story</a>
-                    <a href="#">artists</a>
-                    <a href="#">events</a>
-                    <a href="#">press</a>
-                    <a href="#">contact</a>
-                    <a href="#">jefre pop-up</a>
+                    <div id="pc_header1"><p>our story</p><p>our story</p></div>
+                    <div id="pc_header2"><p>artists</p><p>artists</p></div>
+                    <div id="pc_header3"><p>events</a><p>events</p></div>
+                    <div id="pc_header4"><p>press</p><p>press</p></div>
+                    <div id="pc_header5"><p>contact</p><p>contact</p></div>
+                    <div id="pc_header6"><p>jefre pop-up</p><p>jefre pop-up</p></div>
                 </div>
                 <div id="mobile_header">
                     <div id="mobile_header1"></div>
                     <div id="mobile_header2"></div>
-                    
                 </div>
             </div>
         </header>
@@ -112,17 +111,37 @@
         </nav>
         <main>
             <div id="main" class="box_wrap">
-                <div id="main1" class="box">
-                    <h1>the la art box</h1>
-                    <p>The LA Art Box is a hybrid concept. Part art gallery and part experiential environment, The LAAB is an urban space that allows people to escape to learn and meaningfully connect to a story.</p>
-                    <div id="main1_1">jefre pop-up →</div>
+                <div id="main1" class="box" data-aos="fade-right" data-aos-delay="1200">
+                    <h1>the la <br id="h1_only_pc">art box</h1>
+                    <div id="main1_p" data-aos="fade-up" data-aos-delay="1500"><p >The LA Art Box is a hybrid concept. Part art gallery and part experiential environment, The LAAB is an urban space that allows people to escape to learn and meaningfully connect to a story.</p></div>
+                    
+                    <div id="main1_1" data-aos="fade-right" data-aos-delay="1600">
+                        <div><p>jefre pop-up</p><p>jefre pop-up</p></div>
+                        <div><p>→ →</p></div>
+                    </div>
                     <div id="main1_mobile">
                         <p>scroll to explore</p>
                     </div>
-                    <div id="main1_pc">explore the laab</div>
+                    <div id="main1_pc" data-aos="fade-right" data-aos-delay="1800">
+                        <div><p>explore the laab</p><p>explore the laab</p></div>
+                        <div><p>→ →</p></div>  
+                    </div>
+                    <div id="main1_pc_2">
+                        <div id="sns_main1_pc">
+                            <p>Follow us on</p>
+                            <div id="pc_insta"><div></div><div></div></div>
+                            <div id="pc_fb"><div></div><div></div></div>
+                            <div id="pc_linkedin"><div></div><div></div></div>
+                            <div id="rent"><p>Rent our space</p><p>Rent our space</p></div>
+                        </div>
+                        <div id="copy_main1_pc">
+                            <p>ⓒ2022, THE LA ART BOX. All rights reserved</p>
+                            <div onclick="location.href='https://220207.netlify.app';"><p>포트폴리오 바로가기</p><p>포트폴리오 바로가기</p></div>
+                        </div>
+                    </div>
                 </div>
-                <div id="main2" class="box">
-                    <div id="main2_1">
+                <div id="main2" class="box"  data-aos="fade-left" data-aos-delay="1800">
+                    <div id="main2_1" >
                         <p>our story</p>
                         <h2>laab</h2>
                         <div></div>
@@ -141,6 +160,27 @@
                         <h2>contact</h2>
                     </div>
                 </div>
+                <div id="main2_pc" class="box">
+                    <div id="main2_1_pc" data-aos="fade-left" data-aos-delay="1900">
+                        <p>our story</p>
+                        <h2>laab</h2>
+                        <div></div>
+                    </div>
+                    <div id="main2_2_pc" data-aos="fade-left" data-aos-delay="2100">
+                        <p>artists</p>
+                        <h2>artists</h2>
+                    </div>
+                    <div id="main2_3_pc" data-aos="fade-left" data-aos-delay="2300">
+                        <p>events</p>
+                        <h2>events</h2>
+                        <div></div>
+                    </div>
+                    <div id="main2_4_pc" data-aos="fade-left" data-aos-delay="2500">
+                        <p>contact</p>
+                        <h2>contact</h2>
+                    </div>
+                </div>
+
                 <div id="main3" class="box">
                     <h3>stories that find you</h3>
                     <p>Do you remeber a time growing up when you were sp curious about something real or imaginary - a place, an object, a person - that you asked anyone and evryone to tell you a story about it? There are no limitations to the imagination at The LA Art Box.</p>
@@ -279,6 +319,30 @@
             // 반응형 js 적용 새로고침
             if(matchMedia("screen and (max-width: 1023px)").matches){ console.log("mobile"); }else if(matchMedia("screen and (min-width: 1024px)").matches){ console.log("pc"); }
             window.onresize = function(){ document.location.reload(); };
+        </script>
+        <!-- pc버전 main2 -->
+        <script>
+            $(document).ready(function()
+            {
+            $(`#main2_1_pc`).hover(function(){
+            $(`#main2_1_pc`).css("width","700px");
+            $(`#main2_1_pc div`).css("width","700px");
+            $(`#main2_2_pc`).css("width","70px");
+            $(`#main2_2_pc`).css("transform","translateX(435px)");
+            $(`#main2_3_pc`).css("width","70px");
+            $(`#main2_3_pc`).css("transform","translateX(240px)");
+            $(`#main2_4_pc`).css("width","70px");
+            $(`#main2_4_pc`).css("transform","translateX(110px)");
+            },function(){
+            $(`#main2_1_pc`).css("width","265px");
+            $(`#main2_1_pc div`).css("width","265px");
+            $(`#main2_2_pc`).css("width","265px");
+            $(`#main2_2_pc`).css("transform","translateX(0)");
+            $(`#main2_3_pc`).css("width","200px");
+            $(`#main2_3_pc`).css("transform","translateX(0)");
+            $(`#main2_4_pc`).css("width","190px");
+            $(`#main2_4_pc`).css("transform","translateX(0)");
+        }); });
         </script>
     </body>
 </html>
