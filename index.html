@@ -87,11 +87,11 @@
                     </div>
                 </div>
                 <div id="only_mobile_main">
-                    <div data-aos="fade-right" data-aos-delay="1200"><a href="#" id="go_our_story">our story</a></div>
-                    <div data-aos="fade-right" data-aos-delay="1250"><a href="#" id="go_artists">artists</a></div>
-                    <div data-aos="fade-right" data-aos-delay="1300"><a href="#" id="go_events">events</a></div>
-                    <div data-aos="fade-right" data-aos-delay="1350"><a href="#" id="go_press">press</a></div>
-                    <div data-aos="fade-right" data-aos-delay="1400"><a href="#" id="go_contact">contact</a></div>
+                    <div><a href="#" id="go_our_story">our story</a></div>
+                    <div><a href="#" id="go_artists">artists</a></div>
+                    <div><a href="#" id="go_events">events</a></div>
+                    <div><a href="#" id="go_press">press</a></div>
+                    <div><a href="#" id="go_contact">contact</a></div>
                     <div><a href="#" id="go_purchases_tickets">purchase tickets</a></div>
                 </div>
                 <div id="mobile_sns">
@@ -142,22 +142,22 @@
                         </div>
                     </div>
                 </div>
-                <div id="main2" class="box"  data-aos="fade-left" data-aos-delay="1800">
-                    <div id="main2_1">
+                <div id="main2" class="box">
+                    <div id="main2_1" data-aos="fade-left" data-aos-delay="1800">
                         <p>our story</p>
                         <h2>laab</h2>
                         <div></div>
                     </div>
-                    <div id="main2_2">
+                    <div id="main2_2" data-aos="fade-left" data-aos-delay="2000">
                         <p>artists</p>
                         <h2>artists</h2>
                     </div>
-                    <div id="main2_3">
+                    <div id="main2_3" data-aos="fade-left" data-aos-delay="2200">
                         <p>events</p>
                         <h2>events</h2>
                         <div></div>
                     </div>
-                    <div id="main2_4">
+                    <div id="main2_4" data-aos="fade-left" data-aos-delay="2400">
                         <p>contact</p>
                         <h2>contact</h2>
                     </div>
@@ -183,37 +183,37 @@
                     </div>
                 </div>
 
-                <div id="main3" class="box">
+                <div id="main3" class="box" data-aos="fade-up" data-aos-delay="1900">
                     <h3>stories that find you</h3>
                     <p>Do you remeber a time growing up when you were sp curious about something real or imaginary - a place, an object, a person - that you asked anyone and evryone to tell you a story about it? There are no limitations to the imagination at The LA Art Box.</p>
                 </div>
                 <div id="main4" class="box">
                     <div id="main4_1">→</div>
-                    <div id="main4_2">
+                    <div id="main4_2" data-aos="fade-up" data-aos-delay="1800">
                         <p>partner - profile</p>
                         <h4>parangal<br>dance company</h4>
                         <div></div>
                     </div>
-                    <div id="main4_3">
+                    <div id="main4_3" data-aos="fade-up" data-aos-delay="2000">
                         <p>partner - profile</p>
                         <h4>isidro ancheta</h4>
                         <div></div>
                     </div>
-                    <div id="main4_4">
+                    <div id="main4_4" data-aos="fade-up" data-aos-delay="2200">
                         <p>partner - profile</p>
                         <h4>future studies<br>program</h4>
                         <div></div>
                     </div>
-                    <div id="main4_5">
+                    <div id="main4_5" data-aos="fade-up" data-aos-delay="2400">
                         <p>partner - profile</p>
                         <h4>catwalk to<br>freedom</h4>
                         <div></div>
                     </div>
                 </div>
-                <div id="main5" class="box">
+                <div id="main5" class="box" data-aos="fade-up" data-aos-delay="1800">
                     <h2>art of giving</h2>
                     <p>Because we care, we donate a portion of our profits to communities and organizations that are important to us and our Artists.</p>
-                    <div></div>
+                    <div data-aos="fade-up" data-aos-delay="2800"></div>
                 </div>
             </div>
         </main>
@@ -223,17 +223,17 @@
                 <div id="sns">
                     <div id="insta">
                         <div></div>
-                        <p>@thelaartbox</p>
+                        <li><p>@thelaartbox</p><p>@thelaartbox</p></li>
                     </div>
                     <div id="fb">
                         <div></div>
-                        <p>thelaartbox</p>
+                        <li><p>thelaartbox</p><p>thelaartbox</p></li>
                     </div>
                     <div id="linkedin">
                         <div></div>
-                        <p>the la art box</p>
+                        <li><p>the la art box</p><p>the la art box</p></li>
                     </div>
-                    <div id="join">join our guestlist</div>
+                    <div id="join"><p>join our guestlist</p><p>join our guestlist</p></div>
                 </div>
                 <div id="copy">
                 <p>ⓒ2022, THE LA ART BOX. All rights reserved</p>
@@ -257,6 +257,13 @@
                 $("#mobile_header4").css("transform","translate(-50%,-50%) rotate(-45deg) scale(1)");
                 $("#mobile_header4").css("top","50%");
                 $("#mobile_header4").css("left","50%");
+                $("#only_mobile_main div:nth-child(1)").css("transform","translateX(0)");
+                $("#only_mobile_main div:nth-child(2)").css("transform","translateX(0)");
+                $("#only_mobile_main div:nth-child(3)").css("transform","translateX(0)");
+                $("#only_mobile_main div:nth-child(4)").css("transform","translateX(0)");
+                $("#only_mobile_main div:nth-child(5)").css("transform","translateX(0)");
+                $("#mobile_sns").css("opacity","1");
+                $("#mobile_copy").css("opacity","1");
             });
             // off
             mobile_header0.addEventListener('click',()=>{
@@ -271,6 +278,13 @@
                 $("#mobile_header4").css("transform","translate(-50%,-50%) rotate(-45deg) scale(0)");
                 $("#mobile_header4").css("top","50%");
                 $("#mobile_header4").css("left","50%");
+                $("#only_mobile_main div:nth-child(1)").css("transform","translateX(-330px)");
+                $("#only_mobile_main div:nth-child(2)").css("transform","translateX(-330px)");
+                $("#only_mobile_main div:nth-child(3)").css("transform","translateX(-330px)");
+                $("#only_mobile_main div:nth-child(4)").css("transform","translateX(-330px)");
+                $("#only_mobile_main div:nth-child(5)").css("transform","translateX(-330px)");
+                $("#mobile_sns").css("opacity","0");
+                $("#mobile_copy").css("opacity","0");
             });
         </script>
         <!-- 반응형 script 마우스휠 상하(모바일)/좌우(PC) -->

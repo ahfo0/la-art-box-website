@@ -13,7 +13,7 @@ header #header #pc_header div:hover p{transform:translateY(-27px);}
 header #header #pc_header div p:nth-child(1){margin-bottom:6px;}
 header #mobile_header{display:none; }
 nav #only_mobile_menu{display:none;}
-main #main{display:grid; grid-template-columns: 1100px 1000px 800px 940px 1200px; margin-top:15vh; max-height:85vh;}
+main #main{display:grid; grid-template-columns: 1100px 1000px 800px 1200px 1200px; margin-top:15vh; max-height:85vh;}
 main #main1{margin-top:0px; height:85vh;}
 main #main #main1 h1{font-size:11rem; margin-left: 150px; margin-top:0;}
 main #main #main1 #h1_only_pc{display:block;}
