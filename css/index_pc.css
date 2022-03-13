@@ -2,8 +2,9 @@
 html::-webkit-scrollbar {
     display: none; /* Chrome, Safari, Opera*/
 }
-body{overflow-x:scroll !important; }
-header{position:fixed; top:0; width:100vw; height:15vh;}
+#wrap{min-height:100vh; position:relative; width:100%;}
+body{overflow-x:scroll !important; cursor:pointer;}
+header{position:fixed; top:0; width:100vw; height:8.4375vw; z-index:10}
 header #header{display:grid; grid-template:25px 1fr 25px / 25px 55px 1fr 550px 40px; justify-items:end; max-height:15vh;}
 header #header #pc_header{display:grid; grid-row:2/3;grid-column:4/5;grid-template-columns:157px 118px 112px 97px 131px 190px;height:35px; align-items: end; justify-items: center;}
 header #header #pc_header div{ place-items:center; overflow:hidden; cursor:pointer; height:100%;}
@@ -13,15 +14,16 @@ header #header #pc_header div:hover p{transform:translateY(-27px);}
 header #header #pc_header div p:nth-child(1){margin-bottom:6px;}
 header #mobile_header{display:none; }
 nav #only_mobile_menu{display:none;}
-main #main{display:grid; grid-template-columns: 1100px 1000px 800px 1200px 1200px; margin-top:15vh; max-height:85vh;}
-main #main1{margin-top:0px; height:85vh;}
-main #main #main1 h1{font-size:11rem; margin-left: 150px; margin-top:0;}
+main{position:absolute; bottom:0;}
+main #main{display:grid; grid-template-columns: 1100px 1000px 800px 1200px 600px 850px; margin-top:8.4375vw; height:47.8125vw}
+main #main1{margin-top:0px; height:47.8125vw; display:grid; grid-template-rows:1fr 362px 141px 87px 52px 172px;}
+main #main #main1 h1{font-size:11rem; margin-left: 150px; margin-top:0; grid-row:2/3;}
 main #main #main1 #h1_only_pc{display:block;}
-main #main #main1 #main1_p{margin:30px 1000px 0 525px;}
+main #main #main1 #main1_p{margin:30px 1000px 0 525px; grid-row:3/4;}
 main #main #main1 #main1_p p{font-size:1.2rem; width:395px; height: 111px;}
-main #main #main1 #main1_1{margin-left:525px; margin-top:50px;}
+main #main #main1 #main1_1{margin-left:525px; margin-top:50px; grid-row:4/5;}
 main #main #main1 #main1_mobile{display: none;}
-main #main #main1 #main1_pc{display:grid; text-transform: uppercase; margin-left:525px; margin-top:15px; font-size:2rem; font-weight:bold; width:350px;}
+main #main #main1 #main1_pc{display:grid; text-transform: uppercase; margin-left:525px; margin-top:15px; font-size:2rem; font-weight:bold; width:350px; grid-row:5/6;}
 main #main1 p{font-size:1.5rem; margin: 10px 25px 30px;}
 main #main1 #main1_pc{text-transform: uppercase; margin-left:25px; font-weight:bold; width:350px; cursor:pointer; display:grid; grid-template-columns: 310px 40px; height:37px;}
 main #main1 #main1_pc div{overflow:hidden;}
@@ -29,7 +31,7 @@ main #main1 #main1_pc div p{font-size:2rem; margin:0; transition:0.4s;}
 main #main1 #main1_pc div:nth-child(2) p{width:80px; transform: translateX(-40px);}
 main #main1 #main1_pc:hover div:nth-child(1) p{transform: translateY(-36.8px);}
 main #main1 #main1_pc:hover div:nth-child(2) p{transform: translateX(0);}
-main #main #main1 #main1_pc_2{display:grid; margin-left:25px; margin-top:70px;}
+main #main #main1 #main1_pc_2{display:grid; margin-left:25px; margin-top:70px; grid-row:6/7;}
 footer{display:none;}
 main #main1 #main1_pc_2 #sns_main1_pc{display:grid; grid-template-columns:190px repeat(3,50px) 240px; height:50px; overflow:hidden;}
 main #main1 #main1_pc_2 #sns_main1_pc p{font-size:1.4rem; height:50px;}
@@ -55,7 +57,7 @@ main #main1 #main1_pc_2 #copy_main1_pc div p{transition:0.4s; text-align:center;
 main #main1 #main1_pc_2 #copy_main1_pc div:hover p{transform: translateY(-50px)}
 main #main2{display:none}
 /* main2_pc전환용 */
-main #main2_pc {overflow-x:hidden; height:85vh;}
+main #main2_pc {overflow-x:hidden; height:47.8125vw}
 main #main2_pc p{transform:rotate(90deg); font-size:0.7rem; width:100px; text-align:left; margin-top:100px; margin-right:20px; text-transform: uppercase;} 
 main #main2_pc h2{margin:0; font-weight:bold; font-size: 12rem; text-transform: uppercase;}
 main #main2_pc div{display:grid; grid-template:10px 20px 200px 200px / 0px 60px 1fr; place-items: start; transition:0.9s;}
@@ -68,7 +70,7 @@ main #main2_pc #main2_4_pc{background-color: #fed297;}
 main #main2_pc #main2_1_pc div{background: url(../images/spine-1-compress.jpg) no-repeat 50%/ cover; grid-row:4/5; grid-column:3/4; display:block; width:100%; height:100%;}
 main #main2_pc #main2_3_pc div{background: url(../images/Jefre_Logo_Book_Spine.png) no-repeat 50%/ cover; grid-row:4/5; grid-column:3/4; display:block; width:100%; height:100%;}
 /* 새로 */
-main #main2_pc{display:grid; grid-template-columns:265px 265px 200px 190px; overflow:hidden; height:85vh; align-items:end;}
+main #main2_pc{display:grid; grid-template-columns:265px 265px 200px 190px; overflow:hidden; height:47.8125vw; align-items:end;}
 main #main2_pc p{color:#000000}
 main #main2_pc #main2_1_pc{height:660px; grid-template:500px 160px / 10px 20px 1fr;overflow:hidden; transition:0.9s;}
 main #main2_pc #main2_1_pc p{grid-row:1/2; grid-column:1/2;}
@@ -84,3 +86,29 @@ main #main2_pc #main2_3_pc div{width:265px; height: 160px; grid-row:1/2; grid-co
 main #main2_pc #main2_4_pc{height:705px; grid-template:45px 500px 160px / 10px 20px 1fr;overflow:hidden; transition:0.9s;}
 main #main2_pc #main2_4_pc p{grid-row:2/3; grid-column:1/2;}
 main #main2_pc #main2_4_pc h2{grid-row:2/3; grid-column:2/3; font-size:35rem; line-height:0.75; margin-left:15px;}
+main #main3{height:47.8125vw; display:grid; grid-template-rows: 1fr 462px 205px 74px;}
+main #main3 h3{font-size:6rem; text-align:right; margin-top:80px; margin-right:150px; width: 650px; grid-row:2/3;}
+main #main3 #h3_main3_only_pc{display:block}
+main #main3 #h3_main3_only_pc2{display:block}
+main #main3 p{font-size:1.2rem; width:350px; max-width:none;margin-top:0; margin-left:300px; grid-row:3/4;}
+main #main3 div{display:grid; grid-template-columns:repeat(2,70px); overflow:hidden; margin-left:300px; width:65px; cursor:pointer; grid-row:4/5;}
+main #main3 div p{font-size:4rem; width:65px; margin:0;transform:translateX(-65px); transition:0.4s;}
+main #main3 div:hover p{transform:translateX(0);}
+main #main4{height:47.8125vw; align-items: end; grid-template: 1fr 30px 50px 542px/repeat(4,290px); }
+main #main4 #main4_2{grid-row:4/5; transition:0.8s;}
+main #main4 #main4_2:hover {height:582px;}
+main #main4 #main4_3{grid-row:2/5; transition:0.8s;}
+main #main4 #main4_3:hover {height:662px;}
+main #main4 #main4_4{grid-row:3/5; transition:0.8s;}
+main #main4 #main4_4:hover {height:632px;}
+main #main4 #main4_4 div{max-width:240px;max-height:337px;}
+main #main4 #main4_5{grid-row:4/5; transition:0.8s;}
+main #main4 #main4_5:hover {height:582px;}
+main #main4 #main4_5 div{max-width:240px; max-height:162px;}
+main #main4 #main4_1{display:none;}
+main #main5{height:47.8125vw; display:grid; justify-items:center; grid-template-rows:1fr 450px 300px}
+main #main5 h2{grid-row:2/3;font-size:6rem; margin-top:150px; margin-bottom:0; line-height:1}
+main #main5 #h2_main5_only_pc{display:block}
+main #main5 p{grid-row:3/4;margin-top:0; font-size:1.2rem; width:450px; max-width:none; max-height:200px;}
+main #main6{height:47.8125vw; display:grid; justify-items: center; align-items:end;}
+main #main6 div{width:630px; height:100%;margin-bottom:0;}

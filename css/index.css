@@ -27,11 +27,17 @@ nav #only_mobile_menu #mobile_copy{grid-row: 6/7; grid-column:2/3; transition:2.
 nav #mobile_sns{display:grid; grid-template-rows:repeat(3,50px); align-items:center;}
 nav #mobile_sns #mobile_insta{text-transform: uppercase; border-top:1px solid #202020; height:50px; grid-row:1/2; display:grid; align-items:center; display:grid; align-items:center; grid-template:10px 30px 10px/ 50px 1fr;}
 nav #mobile_sns #mobile_insta div{background: url(../images/mobile_insta.png) no-repeat 50%/cover; grid-row:2/3;grid-column:1/2; width:50%; height:100%;}
-nav #mobile_sns #mobile_insta p{grid-row: 2/3; grid-column:2/3; font-size:1.2rem}
+nav #mobile_sns #mobile_insta div:nth-child(2){background:none; grid-row: 2/3; grid-column:2/3;overflow:hidden;height:100%;}
+nav #mobile_sns #mobile_insta div:nth-child(2) p{ font-size:1.2rem; margin-top:4px ;margin-bottom:16px; transition:0.4s;}
+nav #mobile_sns #mobile_insta:hover div:nth-child(2) p{transform:translateY(-30px)}
 nav #mobile_sns #mobile_fb{text-transform: uppercase; border-top:1px solid #202020; height:50px; grid-row:2/3; display:grid; align-items:center; display:grid; align-items:center;  grid-template:10px 30px 10px/ 50px 1fr;}
 nav #mobile_sns #mobile_fb div{background: url(../images/mobile_fb.png) no-repeat 50%/cover; grid-row:2/3;grid-column:1/2; width:50%; height:100%;}
-nav #mobile_sns #mobile_fb p{grid-row: 2/3; grid-column:2/3; font-size:1.2rem}
-nav #mobile_sns #mobile_join{text-transform: uppercase; border-top:1px solid #202020; height:50px; grid-row:3/4; display:grid; align-items:center;  display:grid; align-items:center; font-weight:bold;}
+nav #mobile_sns #mobile_fb div:nth-child(2){background:none; grid-row: 2/3; grid-column:2/3;overflow:hidden;height:100%;}
+nav #mobile_sns #mobile_fb div:nth-child(2) p{ font-size:1.2rem; margin-top:4px ;margin-bottom:16px; transition:0.4s;}
+nav #mobile_sns #mobile_fb:hover div:nth-child(2) p{transform:translateY(-30px)}
+nav #mobile_sns #mobile_join{text-transform: uppercase; border-top:1px solid #202020; height:50px; grid-row:3/4; display:grid; align-items:center;  display:grid; align-items:center; font-weight:bold; overflow:hidden;}
+nav #mobile_sns #mobile_join p{margin-top:16px; margin-bottom:16px; transition:0.4s;}
+nav #mobile_sns #mobile_join:hover p{transform: translateY(-50px)}
 nav #mobile_sns div p{text-transform: uppercase; margin:0; font-weight:bold;}
 nav #mobile_copy{display:grid; grid-template-columns:250px 120px 1fr; justify-items:start;}
 nav #mobile_copy p{max-width:250px; font-size:0.75rem; grid-column:1/2; grid-row:1/2; font-weight:400; text-transform:none;}
@@ -65,8 +71,10 @@ main #main2 #main2_1 div{background: url(../images/spine-1-compress.jpg) no-repe
 main #main2 #main2_3 div{background: url(../images/Jefre_Logo_Book_Spine.png) no-repeat 50%/ cover; grid-row:4/5; grid-column:3/4; display:block; width:100%; height:100%;}
 main #main2_pc{display:none}
 main #main3 h3{text-transform: uppercase; margin:50px 25px; font-size:4.5rem;}
-
+main #main3 #h3_main3_only_pc{display:none}
+main #main3 #h3_main3_only_pc2{display:none}
 main #main3 p{margin:50px 25px; color:#313131; max-width:280px;}
+main #main3 div{display:none;}
 main #main4 {overflow-x:scroll; display:grid; grid-template:30px 50px 542px/repeat(4,290px); align-items:center; justify-items:start;}
 main #main4 div p{transform:rotate(90deg); text-transform:uppercase; font-size:0.75rem;}
 main #main4 div h4{font-size:1.5rem; text-transform: uppercase; text-align:right; margin-right:15px;}
@@ -88,8 +96,9 @@ main #main4 #main4_5 p{grid-row:2/3; grid-column:1/2; height:25px; width:200px; 
 main #main4 #main4_5 h4{grid-row:2/3; grid-column:3/5; margin:0; margin-top:10px;}
 main #main4 #main4_5 div{grid-row:4/5; grid-column:2/5; background:url(../images/Screen_Shot_2021-06-12_at_9.34.37_AM.png) no-repeat 50% /cover;}
 main #main5 h2{margin:250px 25px 30px; text-transform:uppercase; font-size:4.5rem;}
+main #main5 #h2_main5_only_pc{display:none;}
 main #main5 p{margin:50px 25px; color:#313131; max-width:240px;}
-main #main5 div{background: url(../images/Give_a_fck.png) no-repeat 50% / cover; width:100vw; height:136vw; margin-bottom:125px;}
+main #main6 div{background: url(../images/Give_a_fck.png) no-repeat 50% / cover; width:100vw; height:136vw; margin-bottom:125px;}
 footer #footer{background-color: #202020; color:#f7f0ee; padding:30px 25px;}
 footer #footer #footer_main{text-transform: uppercase; margin-bottom:30px;font-weight:bold;}
 footer #footer #sns{display:grid; grid-template-rows:repeat(4,50px); align-items:center;}
